@@ -24,7 +24,15 @@ fn main() {
     // but using shadowing we can;
     let spaces = "    ";
     let spaces = spaces.len();
-    println!("spaces {}", spaces) // 4
+    println!("spaces {}", spaces); // 4
     // ============================================================
 
+    let st = String::from("book");
+    let pl = pluralize(&st);
+    println!("el {} y los {}", st, pl);
+
+}
+
+fn pluralize(s: &str) -> String {
+    s.to_owned() + "s"
 }
